@@ -1,0 +1,12 @@
+BOSQUE ENCANTADO — LABORATORIO DE CRIATURAS v1
+
+Esta versión añade laboratorio.html como página independiente y un enlace discreto desde la sección final de index.html. No incorpora el editor dentro de la página principal.
+
+INSTRUCCIONES
+1. Descomprimí todo el ZIP manteniendo la carpeta assets.
+2. Probá abriendo index.html desde un servidor local o publicando el contenido completo en GitHub Pages.
+3. El botón “Volver al bosque” regresa a index.html.
+4. La ficha PNG se genera en el navegador. No se envían datos a ningún servidor.
+
+NOTA DE ALCANCE
+El laboratorio es un prototipo interactivo con ilustración vectorial por capas y controles visuales. Las cinco familias tienen listas de piezas preferentes, dos modos de combinación y 15 personajes de partida. La ilustración es conceptual; no equivale todavía a una biblioteca de 15 ilustraciones pintadas individualmente.
