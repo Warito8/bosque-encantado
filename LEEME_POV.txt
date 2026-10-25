@@ -1,0 +1,18 @@
+BOSQUE ENCANTADO · CAPÍTULO “COMPARTE TU POV”
+
+Este ZIP conserva el sitio de partida y añade únicamente la sección POV, su enlace de navegación, estilos y lógica de integración. El formulario NO podrá subir archivos hasta configurar Supabase: no se han inventado ni incluido credenciales.
+
+CONFIGURACIÓN NECESARIA
+1. En Supabase, crea o elige un proyecto.
+2. En Storage, crea un bucket público llamado exactamente: bosque-pov
+   - Limita los tipos a image/jpeg, image/png, image/webp, video/mp4, video/quicktime y video/webm.
+   - Establece el límite de tamaño por archivo en 50 MB (o menos, si prefieres).
+3. Define políticas de Storage: (a) INSERT únicamente en el bucket bosque-pov para las cargas públicas; (b) SELECT/listado limitado al bucket bosque-pov para que el carrusel pueda enumerar archivos. El bucket público permite leer archivos por URL, pero NO permite subir ni listar sin las políticas correspondientes.
+4. Copia el Project URL y la publishable key (o la anon key heredada) del proyecto. Nunca uses service_role/secret key en el navegador.
+5. En index.html, busca POV_SUPABASE_URL y POV_SUPABASE_KEY y reemplaza los valores de ejemplo.
+6. Publica el contenido del ZIP en GitHub Pages y prueba una foto y un vídeo desde el móvil.
+
+IMPORTANTE SOBRE PUBLICACIÓN AUTOMÁTICA
+Con la política pública de INSERT y el bucket público, cualquiera puede intentar subir archivos y los archivos subidos se muestran en la galería. Para una web pública, añade protección contra abuso (por ejemplo, Turnstile/una función de servidor con límites de tasa) antes de anunciar la función ampliamente. No concedas permisos públicos de UPDATE o DELETE y no expongas nunca la service_role key. La galería lee hasta 200 elementos del bucket en orden de creación; para un evento pequeño debería ser suficiente.
+
+No se han alterado los capítulos originales, la portada, el logo ni los textos existentes salvo el nuevo enlace de navegación.
